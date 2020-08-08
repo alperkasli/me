@@ -1,4 +1,4 @@
-https://alperkasli.github.io/portfolio
+https://alperkasli.github.io/me
 
 personal portfolio website
 created using react-three-fiber
