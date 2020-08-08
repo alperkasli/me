@@ -23,7 +23,6 @@ function Paragraph({ image, index, offset, factor, header, aspect, text, section
   const pixelWidth = w * state.zoom * size
   const left = !(index % 2)
   const color = index % 2 ? "#D40749" : "#2FE8C3"
-  console.log(section)
   return (
     <Block factor={factor} offset={offset}>
       <group position={[left ? -alignRight : alignRight, 0, 0]}>
@@ -49,7 +48,7 @@ function Paragraph({ image, index, offset, factor, header, aspect, text, section
 function Content() {
   const images = useLoader(TextureLoader, state.paragraphs.map(({ image }) => image))
   useMemo(() => images.forEach(texture => (texture.minFilter = LinearFilter)), [images])
-  const { contentMaxWidth: w, canvasWidth, canvasHeight, mobile } = useBlock()
+  const { contentMaxWidth: w, mobile } = useBlock()
   return (
     <>
       <Block factor={1} offset={0}>
